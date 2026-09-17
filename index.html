@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="이소연의 MICE·행사 기획 및 운영 포트폴리오">
+<title>이소연 | MICE 행사 기획 및 운영 포트폴리오</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root { --ivory:#faf9f5; --navy:#0f172a; --blue:#1d4ed8; --coral:#ea580c; --muted:#64748b; --line:#e5e0d6; --tint:#f3efe7; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--ivory); color:var(--navy); font-family:"Pretendard","Noto Sans KR",system-ui,sans-serif; }
+button,a { font:inherit; }
+button { cursor:pointer; }
+.site-shell { min-height:100vh; overflow-x:hidden; }
+.site-nav { position:sticky; top:0; z-index:40; height:76px; padding:0 clamp(20px,5vw,72px); display:flex; align-items:center; justify-content:space-between; background:color-mix(in srgb, var(--ivory) 92%, transparent); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
+.brand { display:flex; gap:11px; align-items:center; color:var(--navy); text-decoration:none; letter-spacing:.08em; font-size:12px; font-weight:800; }
+.brand>span { display:grid; place-items:center; width:32px; height:32px; background:var(--navy); color:var(--ivory); font-size:11px; letter-spacing:-.05em; }
+.brand small { display:block; font-size:8px; color:var(--muted); margin-top:3px; letter-spacing:.12em; }
+.site-nav nav { display:flex; gap:26px; }
+.site-nav nav button { border:0; background:none; color:var(--muted); font-size:11px; letter-spacing:.1em; font-weight:700; padding:8px 0; }
+.site-nav nav button.active,.site-nav nav button:hover { color:var(--blue); }
+.menu-button,.mobile-menu { display:none; }
+.hero-section { min-height:calc(100vh - 76px); display:grid; grid-template-columns:1.08fr .92fr; padding:clamp(56px,8vw,112px) clamp(24px,8vw,120px) 60px; position:relative; }
+.hero-copy { align-self:center; max-width:700px; }
+.eyebrow,.section-label,.case-label { font-size:11px; letter-spacing:.16em; font-weight:800; color:var(--blue); }
+.hero-copy h1 { margin:25px 0 28px; font-size:clamp(42px,5.4vw,76px); line-height:1.12; letter-spacing:-.055em; font-weight:800; }
+.hero-copy h1 em,.contact-section h2 em { color:var(--coral); font-style:normal; }
+.hero-intro { max-width:590px; color:#475569; font-size:18px; line-height:1.85; word-break:keep-all; }
+.hero-meta { display:flex; gap:22px; margin-top:40px; color:var(--muted); font-size:12px; border-top:1px solid var(--line); padding-top:16px; }
+.hero-meta span:first-child { color:var(--navy); font-weight:800; }
+.hero-mark { align-self:stretch; position:relative; display:flex; flex-direction:column; justify-content:center; align-items:center; background:var(--navy); color:var(--ivory); overflow:hidden; margin:0 0 18px 4vw; }
+.hero-grid { position:absolute; inset:0; background-image:linear-gradient(#ffffff12 1px,transparent 1px),linear-gradient(90deg,#ffffff12 1px,transparent 1px); background-size:40px 40px; opacity:.6; }
+.hero-big { position:relative; font-size:clamp(80px,12vw,170px); letter-spacing:-.1em; font-weight:900; color:#ffffff10; }
+.hero-mark p { position:relative; color:#bfdbfe; font-size:11px; letter-spacing:.2em; line-height:1.9; text-align:center; }
+.scroll-cue { position:absolute; left:clamp(24px,8vw,120px); bottom:36px; display:flex; align-items:center; gap:9px; color:var(--muted); text-decoration:none; font-size:10px; letter-spacing:.15em; }
+.content-section,.process-section,.why-section { padding:120px clamp(24px,8vw,120px); }
+.section-label { display:flex; gap:14px; align-items:center; border-top:1px solid var(--navy); padding-top:15px; margin-bottom:48px; }
+.section-label span { color:var(--coral); font-family:monospace; }
+.section-heading { display:flex; justify-content:space-between; gap:40px; align-items:end; margin-bottom:56px; }
+.section-heading h2,.dark-heading h2 { margin:0; font-size:clamp(32px,4vw,54px); letter-spacing:-.05em; line-height:1.2; }
+.section-heading h2 span,.dark-heading h2 span { color:var(--blue); }
+.section-heading p,.dark-heading p { max-width:370px; color:var(--muted); line-height:1.8; word-break:keep-all; }
+.competency-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:34px; }
+.competency-grid>div { border-top:2px solid var(--navy); padding-top:22px; }
+.number { display:block; font-family:monospace; color:var(--coral); font-size:15px; font-weight:700; margin-bottom:26px; }
+.competency-grid h3 { font-size:14px; letter-spacing:.08em; margin:0 0 10px; }
+.competency-grid h4 { margin:0 0 18px; font-size:23px; }
+.competency-grid p { color:var(--muted); line-height:1.8; font-size:15px; word-break:keep-all; min-height:110px; }
+.competency-grid b { display:block; color:var(--blue); font-size:13px; line-height:1.6; }
+.dark-section { background:var(--navy); color:var(--ivory); padding:120px clamp(24px,8vw,120px); }
+.dark-section .section-label { border-color:#94a3b8; color:#bfdbfe; }.dark-heading { display:flex; justify-content:space-between; gap:40px; align-items:end; margin-bottom:70px; }.dark-heading p { color:#cbd5e1; }.dark-heading h2 span { color:#93c5fd; }
+.exhibition-list { display:grid; gap:25px; }.exhibition-list>div { display:grid; grid-template-columns:190px 1fr; gap:25px; border-top:1px solid #ffffff26; padding-top:20px; }.exhibition-list h3 { margin:0; color:#fb923c; font-size:12px; letter-spacing:.1em; }.exhibition-list div div { display:flex; flex-wrap:wrap; gap:8px 24px; }.exhibition-list span { color:#e2e8f0; font-size:14px; }.work-footnote { margin-top:45px; color:#94a3b8; font-size:12px; }
+.case-list { display:grid; gap:14px; }.case-card { padding:28px 30px; border:1px solid var(--line); background:#fffdfa; transition:transform .2s ease,border-color .2s ease; }.case-card:hover { transform:translateX(6px); border-color:var(--blue); }.case-card-top { display:flex; align-items:center; gap:15px; color:var(--muted); }.case-card-top svg { margin-left:auto; color:var(--blue); }.case-no { font:700 11px monospace; color:var(--coral); }.case-card h3 { max-width:800px; font-size:26px; margin:24px 0 10px; letter-spacing:-.04em; }.case-card p { margin:0; color:var(--muted); }.tag-row { display:flex; flex-wrap:wrap; gap:7px; margin-top:22px; }.tag-row span { padding:6px 9px; background:var(--tint); color:#475569; font-size:11px; }
+.process-section { background:var(--tint); }.process-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--navy); }.process-grid>div { padding:28px 22px 0 0; border-right:1px solid #d4cec1; min-height:245px; }.process-grid>div:not(:first-child) { padding-left:22px; }.process-grid span { color:var(--coral); font:700 14px monospace; }.process-grid h3 { font-size:22px; margin:20px 0 7px; }.process-grid h4 { margin:0 0 15px; font-size:14px; }.process-grid p { color:var(--muted); line-height:1.8; font-size:13px; word-break:keep-all; }
+.why-section { background:#e7e2d8; }.why-flow { display:grid; grid-template-columns:1fr auto 1fr auto 1fr auto 1fr; gap:18px; align-items:center; }.why-flow>div { min-height:145px; border-top:2px solid var(--navy); padding-top:17px; }.why-flow small { display:block; color:var(--blue); font:700 10px monospace; letter-spacing:.1em; margin-bottom:17px; }.why-flow strong { display:block; font-size:18px; line-height:1.45; }.why-flow svg { color:var(--coral); }.why-flow .highlight { background:var(--navy); color:var(--ivory); padding:18px; border-top:0; }.why-flow .highlight small { color:#93c5fd; }.why-statement { margin-top:68px; display:grid; grid-template-columns:1.2fr .8fr; gap:60px; border-top:1px solid var(--navy); padding-top:30px; }.why-statement p { font-size:26px; line-height:1.55; letter-spacing:-.04em; margin:0; }.why-statement b { align-self:end; color:var(--blue); line-height:1.7; }
+.contact-section { background:var(--navy); color:var(--ivory); padding:110px clamp(24px,8vw,120px) 38px; min-height:610px; display:flex; flex-direction:column; justify-content:space-between; }.contact-section .eyebrow { color:#93c5fd; }.contact-section h2 { font-size:clamp(40px,5.5vw,76px); line-height:1.12; letter-spacing:-.06em; margin:22px 0; }.contact-section>div:first-child>p:last-child { color:#cbd5e1; max-width:600px; line-height:1.8; }.contact-card { align-self:flex-end; width:min(100%,460px); border-top:1px solid #ffffff40; padding-top:22px; display:grid; gap:13px; }.contact-card span { color:#93c5fd; font-size:13px; }.contact-card a { color:var(--ivory); text-decoration:none; display:flex; align-items:center; gap:10px; font-size:16px; }.contact-card a:hover { color:#fb923c; }.contact-footer { border-top:1px solid #ffffff26; padding-top:15px; margin-top:70px; display:flex; justify-content:space-between; color:#94a3b8; font:10px monospace; letter-spacing:.1em; }
+.modal-backdrop { position:fixed; inset:0; z-index:80; background:#0f172acc; display:grid; place-items:center; padding:20px; }.case-modal { width:min(920px,100%); max-height:90vh; background:var(--ivory); display:flex; flex-direction:column; border:1px solid var(--line); }.modal-header,.modal-footer { padding:18px 24px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--line); }.modal-header { color:var(--blue); font:700 11px monospace; letter-spacing:.1em; }.modal-header button { border:0; background:none; color:var(--navy); }.modal-footer { border-top:1px solid var(--line); border-bottom:0; justify-content:flex-end; }.modal-footer button { border:0; background:var(--navy); color:var(--ivory); padding:10px 22px; }.modal-body { padding:36px 42px; overflow:auto; }.modal-kicker { color:var(--coral); font:700 11px monospace; letter-spacing:.15em; }.modal-body h2 { font-size:34px; line-height:1.25; letter-spacing:-.05em; margin:15px 0 10px; }.modal-subtitle { color:var(--muted); margin:0 0 30px; }.modal-section { margin-top:28px; border-top:1px solid var(--line); padding-top:18px; }.modal-section h4 { display:flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.1em; margin:0 0 13px; color:var(--blue); }.modal-section p { color:#475569; line-height:1.8; }.role-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px 18px; color:#475569; font-size:14px; line-height:1.6; }.approach-list { display:flex; flex-wrap:wrap; gap:8px; }.approach-list span { padding:9px 11px; background:var(--tint); font:11px monospace; color:#475569; }.approach-list b { color:var(--coral); margin-right:7px; }.result-callout { background:#e0e9ff; border-left:3px solid var(--blue); padding:17px; color:var(--navy); line-height:1.7; }.modal-section blockquote { margin:0; padding:18px; background:var(--navy); color:var(--ivory); line-height:1.7; }
+@media (max-width:900px) { .site-nav nav { display:none; }.menu-button { display:block; border:0; background:none; }.mobile-menu { position:fixed; z-index:39; top:76px; left:0; right:0; display:grid; background:var(--ivory); border-bottom:1px solid var(--line); padding:10px 24px; }.mobile-menu button { display:flex; justify-content:space-between; border:0; border-bottom:1px solid var(--line); background:none; padding:16px 0; text-align:left; color:var(--navy); letter-spacing:.1em; font-size:12px; }.hero-section { grid-template-columns:1fr; padding-top:80px; }.hero-mark { min-height:260px; margin:70px 0 0; }.hero-meta { flex-wrap:wrap; }.section-heading,.dark-heading { display:block; }.section-heading p,.dark-heading p { margin-top:20px; }.competency-grid { grid-template-columns:1fr; gap:48px; }.competency-grid p { min-height:0; }.exhibition-list>div { grid-template-columns:1fr; gap:10px; }.process-grid { grid-template-columns:1fr 1fr; }.process-grid>div { min-height:210px; }.why-flow { grid-template-columns:1fr; gap:16px; }.why-flow>svg { transform:rotate(90deg); justify-self:center; }.why-flow>div,.why-flow>div:not(:first-child) { padding:18px; border:1px solid #d4cec1; }.why-statement { grid-template-columns:1fr; gap:24px; }.contact-card { align-self:stretch; margin-top:45px; }.contact-footer { display:block; line-height:1.8; }.contact-footer span { display:block; }.modal-body { padding:26px 22px; }.role-grid { grid-template-columns:1fr; }.modal-body h2 { font-size:27px; } }
+@media (max-width:540px) { .hero-copy h1 { font-size:42px; }.hero-intro { font-size:16px; }.content-section,.process-section,.why-section,.dark-section { padding-top:80px; padding-bottom:80px; }.section-heading h2,.dark-heading h2 { font-size:34px; }.process-grid { grid-template-columns:1fr; }.process-grid>div,.process-grid>div:not(:first-child) { min-height:0; padding:22px 0; border-right:0; border-bottom:1px solid #d4cec1; }.case-card h3 { font-size:22px; }.why-statement p { font-size:22px; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; }.case-card { transition:none; } }
+
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+/* ============================================================
+   EDITABLE CONTENT — 수정할 때는 이 영역만 먼저 확인하세요.
+   아래쪽의 HTML/CSS/기능 코드는 원본 Manus 디자인을 재현합니다.
+   ============================================================ */
+const CONTENT = {
+  profile: {
+    name: '이소연',
+    brand: 'LEE SO-YEON',
+    role: '주임 · TradeExpo',
+    period: '2023.12 — 2026.07',
+    eyebrow: 'MICE · EXHIBITION PROJECT OPERATOR',
+    headline: ['사람과 정보를 연결하고,', '현장의 결과', '로', '만드는 사람'],
+    intro: '해외 전시회 실무를 통해 참가기업, 해외 주최사, 유관기관, 바이어 등 다양한 이해관계자를 연결하며 모집부터 홍보, 운영, 현장 대응까지 프로젝트의 전 과정을 경험했습니다.',
+    contactRole: '이소연 · MICE 행사 기획 및 운영',
+    email: '',
+    linkedin: ''
+  },
+  competencies: [
+    {number:'01', eng:'PROJECT MANAGEMENT', title:'프로젝트 기획·운영', desc:'참가기업 모집부터 참가 상담, 서류, 비용·정산 관련 업무, 주최사 커뮤니케이션, 홍보, 현장 운영, 사후 결과 정리까지 이어지는 흐름을 경험했습니다.', evidence:'월 평균 4–5개 전시회 · 최대 70개사 이상 관리'},
+    {number:'02', eng:'STAKEHOLDER COMMUNICATION', title:'이해관계자 커뮤니케이션', desc:'참가기업·해외 주최사·KOTRA·지자체·바이어·내부 담당자·현장 파트너의 목적을 파악하고, 필요한 정보를 각 상대방에게 맞게 재정리해 전달했습니다.', evidence:'요구사항 파악 → 정보 재구성 → 조율 → 실행'},
+    {number:'03', eng:'EXECUTION & PROBLEM SOLVING', title:'실행력·문제해결', desc:'반복 문의의 원인을 분석해 매뉴얼과 정보 구조를 개선하고, 현장에서는 냉장 샘플 운영 문제에 필요한 장비를 직접 확보해 샘플링을 지속했습니다.', evidence:'반복 문의 10건 → 2건 · 약 80% 감소'}
+  ],
+  exhibitions: {
+    'FOOD & PACKAGING':['Vietnam Foodexpo','Vietfood & Beverage–ProPack','Allpack Indonesia','Anuga Select India','Anuga FoodTec India','VIETFISH','TAROPAK Poland','ProPack Vietnam','TUTTOFOOD'],
+    'BEAUTY & LIFESTYLE':['Indo Beauty Expo','LIFESTYLE Week Tokyo','LIFESTYLE Week Osaka','Health & Beauty Goods Expo Tokyo','Cosme Week Osaka','Cosmetic 360 Paris'],
+    'OTHER':['Orgatec Tokyo','Malaysia International Halal Showcase','Tech-G Shanghai','Didacta Asia','FLAsia Singapore','K-Beauty Street']
+  },
+  cases: [
+    {no:'01',label:'TRADEEXPO',title:'다수의 해외 전시 프로젝트를 동시에 움직이다',subtitle:'참가기업 모집부터 주최사 커뮤니케이션, 홍보와 현장 대응까지',tags:['모집','DB 관리','주최사 커뮤니케이션','홍보','현장 지원'],problem:'하나의 전시회가 아니라 여러 국가와 산업군의 프로젝트가 동시에 진행됐습니다. 전시회마다 모집 시기, 참가 조건, 마감, 서류, 참가비와 주최사 요구사항이 달라 프로젝트별 정보를 정확하게 분리하고 연결해야 했습니다.',role:['해외 전시회 정보 조사','잠재 참가기업 전화·메일·상담','참가 신청·서류·비용 관련 관리','해외 주최사 이메일 커뮤니케이션','이메일 마케팅 콘텐츠 작성','KOTRA·지자체 등 유관기관 소통'],approach:['MARKET RESEARCH','TARGET COMPANY','OUTREACH','CONSULTATION','PARTICIPATION MANAGEMENT','ORGANIZER COORDINATION','PROMOTION','ON-SITE SUPPORT','RESULT REPORTING'],result:'월 평균 4–5개 해외 전시회 업무를 동시에 수행하고, 최대 70개사 이상의 참가기업을 관리했습니다.',learning:'전시회 운영은 하나의 업무를 잘 처리하는 것이 아니라 서로 다른 이해관계자의 업무가 끊기지 않도록 전체 흐름을 연결하는 일이라는 것을 배웠습니다.'},
+    {no:'02',label:'PROCESS IMPROVEMENT',title:'반복되는 문의를 줄이는 가장 좋은 방법은 질문이 생기지 않게 만드는 것이었습니다',subtitle:'참가기업 매뉴얼과 정보 전달 구조를 개선한 운영 효율화 프로젝트',tags:['문의 패턴 분석','매뉴얼 개선','자료실 구축'],problem:'참가기업 관리 과정에서 비슷한 문의가 일 평균 약 10건 반복됐습니다. 단순 안내에 시간이 소요되면서 중요한 기업 상담과 프로젝트 관리에 집중하기 어려웠습니다.',role:['실제 문의 내용 확인','반복 질문 유형화','참가 절차·제출서류·일정·현장 준비사항 정리','참가기업용 매뉴얼 개선','홈페이지 공통자료실 정보 구조 개선'],approach:['문의 패턴을 데이터처럼 분류','참가기업의 실제 업무 순서에 맞춰 매뉴얼 재구성','필요 자료를 스스로 찾을 수 있는 공통자료실 제공'],result:'일 평균 반복 문의를 약 10건에서 2건으로 줄여 약 80% 감소시켰습니다. 단순 업무량 감소가 아니라 중요한 상담과 프로젝트 관리에 집중할 수 있는 환경을 만들었습니다.',learning:'업무 효율화는 일을 더 빨리 처리하는 것이 아니라 같은 문제가 반복되지 않도록 구조를 바꾸는 것입니다.'},
+    {no:'03',label:'GTEP × THAIFEX-ANUGA ASIA',title:'현장에서 계획이 바뀌어도, 행사의 목적은 놓치지 않는다',subtitle:'기업 발굴 → 제품 이해 → 부스 운영 → 제품 설명 → 바이어 상담',tags:['제품 발굴','부스 운영','제품 설명','바이어 상담','현장 대응'],problem:'콤부차 제품 샘플 제공 과정에서 냉장 상태를 유지해야 하는 운영 문제가 발생했습니다. 샘플링이 중단되면 바이어 상담의 목적도 약해질 수 있는 상황이었습니다.',role:['2개 기업·제품 직접 발굴','기업 대표 미팅 및 제품·시장성 파악','전시 준비 및 부스 운영','제품 설명 및 해외 바이어 상담','제품 제안 및 현장 문제 대응'],approach:['제품의 핵심 가치와 시장성 사전 숙지','바이어 니즈를 확인한 뒤 적합한 제품 제안','현장에서 필요한 장비를 즉시 탐색하고 대체 방법 실행'],result:'현지에서 아이스박스를 직접 확보해 샘플 제공을 지속했고, 태국 항공사 기내식 관련 바이어에게 제품을 제안했습니다.',learning:'전시회의 목적은 단순히 부스를 운영하는 것이 아니라 참가기업과 바이어 사이에 실제 접점을 만드는 것입니다.'}
+  ],
+  process: [
+    ['01','DISCOVER','정보를 수집합니다.','행사 목적 · 참가기업 니즈 · 주최사 요구사항 · 일정 · 예산/조건 · 대상 바이어 · 현장 환경'],
+    ['02','DEFINE','문제를 정의합니다.','무엇이 가장 중요한가? 어떤 이해관계자를 먼저 연결해야 하는가? 어디에서 문제가 발생할 가능성이 있는가?'],
+    ['03','DESIGN','실행 구조를 만듭니다.','일정 · 역할 · 커뮤니케이션 · 참가기업 안내 · 홍보 · 현장 운영 · 대응 프로세스 · 자료/매뉴얼'],
+    ['04','DELIVER','실제로 실행합니다.','참가기업 모집 · 관계자 커뮤니케이션 · 현장 운영 · 문제 대응 · 결과 확인 · 사후 정리']
+  ],
+  why: {
+    statement:'“지금까지는 해외 전시회 현장에서 기업과 주최사, 바이어를 연결해왔다면, 앞으로는 산업을 구성하는 다양한 이해관계자를 연결하는 MICE 행사를 만들고 싶습니다.”',
+    closing:'협회의 목적과 산업의 가치를 실제 행사 현장의 결과로 연결하는 실무자가 되겠습니다.'
+  }
+};
+
+const navItems=[['ABOUT','about'],['WORK','work'],['CASES','cases'],['PROCESS','process'],['WHY MICE','why-mice'],['CONTACT','contact']];
+const icon={
+  arrowRight:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`,
+  arrowDown:`<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>`,
+  x:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>`,
+  menu:`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`,
+  check:`<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>`,
+  alert:`<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>`,
+  mail:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 5L2 7"/></svg>`
+};
+function esc(s){return String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':'&quot;'}[m]));}
+function label(n,t){return `<div class="section-label"><span>${n}</span><b>${t}</b></div>`;}
+function render(){
+ const c=CONTENT;
+ document.getElementById('root').innerHTML=`
+ <div class="site-shell">
+  <header class="site-nav"><a class="brand" href="#about"><span>LS</span><div>${esc(c.profile.brand)}<small>MICE PORTFOLIO</small></div></a><nav>${navItems.map(([l,id])=>`<button data-go="${id}">${l}</button>`).join('')}</nav><button class="menu-button" id="menuBtn" aria-label="메뉴">${icon.menu}</button></header>
+  <div class="mobile-menu" id="mobileMenu">${navItems.map(([l,id])=>`<button data-go="${id}">${l}${icon.arrowRight}</button>`).join('')}</div>
+  <main>
+   <section id="about" class="hero-section"><div class="hero-copy"><p class="eyebrow">${c.profile.eyebrow}</p><h1>${esc(c.profile.headline[0])}<br><em>${esc(c.profile.headline[1])}</em>${esc(c.profile.headline[2])}<br>${esc(c.profile.headline[3])}</h1><p class="hero-intro">${esc(c.profile.intro)}</p><div class="hero-meta"><span>${esc(c.profile.name)}</span><span>${esc(c.profile.role)}</span><span>${esc(c.profile.period)}</span></div></div><div class="hero-mark"><div class="hero-grid"></div><div class="hero-big">MICE</div><p>PLAN THE EXPERIENCE.<br>CONNECT THE PEOPLE.<br>DELIVER THE RESULT.</p></div><a class="scroll-cue" href="#competencies">${icon.arrowDown} SCROLL TO EXPLORE</a></section>
+   <section id="competencies" class="content-section">${label('01','CORE COMPETENCIES')}<div class="section-heading"><h2>선언이 아니라,<br><span>실제 경험</span>으로 증명합니다.</h2><p>제가 잘한다고 말하는 대신, 실제 프로젝트에서 어떤 흐름으로 업무를 수행했는지 보여드립니다.</p></div><div class="competency-grid">${c.competencies.map(x=>`<div><span class="number">${x.number}</span><h3>${x.eng}</h3><h4>${x.title}</h4><p>${x.desc}</p><b>${x.evidence}</b></div>`).join('')}</div></section>
+   <section id="work" class="dark-section">${label('02','EXPERIENCE / SELECTED PROJECTS')}<div class="dark-heading"><h2>전시회 리스트보다,<br><span>프로젝트의 흐름</span>을 보여드립니다.</h2><p>다양한 국가·산업군의 해외 전시 업무를 수행했습니다. 각 전시회마다 실제 담당 범위를 기준으로 모집, 운영, 홍보, 주최사 커뮤니케이션, 현장 지원 경험을 쌓았습니다.</p></div><div class="exhibition-list">${Object.entries(c.exhibitions).map(([g,l])=>`<div><h3>${g}</h3><div>${l.map(x=>`<span>${esc(x)}</span>`).join('')}</div></div>`).join('')}</div><div class="work-footnote">전시회별 담당 범위는 프로젝트에 따라 달랐으며, 확인된 업무만 포트폴리오에 반영했습니다.</div></section>
+   <section id="cases" class="content-section">${label('03','CASE STUDIES')}<div class="section-heading"><h2>문제에서 결과까지,<br><span>제가 움직인 장면</span>들입니다.</h2><p>카드를 클릭하면 Problem → Role → Approach → Action → Result → Learning의 전체 흐름을 확인할 수 있습니다.</p></div><div class="case-list">${c.cases.map(x=>`<article class="case-card" data-case="${x.no}" role="button" tabindex="0"><div class="case-card-top"><span class="case-no">CASE ${x.no}</span><span class="case-label">${esc(x.label)}</span>${icon.arrowRight}</div><h3>${esc(x.title)}</h3><p>${esc(x.subtitle)}</p><div class="tag-row">${x.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div></article>`).join('')}</div></section>
+   <section id="process" class="process-section">${label('04','HOW I WORK')}<div class="section-heading"><h2>계획을 만드는 사람에 머무르지 않고,<br><span>계획이 현장에서 작동할 때까지</span> 움직입니다.</h2></div><div class="process-grid">${c.process.map(x=>`<div><span>${x[0]}</span><h3>${x[1]}</h3><h4>${x[2]}</h4><p>${x[3]}</p></div>`).join('')}</div></section>
+   <section id="why-mice" class="why-section">${label('05','WHY MICE / WHY THIS ROLE')}<div class="why-flow"><div><small>MY EXPERIENCE</small><strong>해외 전시회</strong></div>${icon.arrowRight}<div><small>WHAT I LEARNED</small><strong>행사는 사람·정보·일정·현장을 연결하는 프로젝트</strong></div>${icon.arrowRight}<div><small>TRANSFERABLE SKILLS</small><strong>모집 · 조율 · 홍보 · 현장 운영 · 문제 해결 · 결과 정리</strong></div>${icon.arrowRight}<div class="highlight"><small>NEXT STEP</small><strong>전시회 중심의 경험을 컨퍼런스·세미나·산업행사까지 확장</strong></div></div><div class="why-statement"><p>${esc(c.why.statement)}</p><b>${esc(c.why.closing)}</b></div></section>
+   <section id="contact" class="contact-section"><div><p class="eyebrow">READY TO CONNECT</p><h2>사람과 정보를 연결해<br><em>하나의 행사</em>를 완성하겠습니다.</h2><p>한국풍력산업협회의 회원사, 산업 관계자, 정부·유관기관, 해외 파트너, 연사, 참가자가 만나는 MICE 현장에서 실무로 기여하겠습니다.</p></div><div class="contact-card"><span>${esc(c.profile.contactRole)}</span>${c.profile.email?`<a href="mailto:${esc(c.profile.email)}">${icon.mail} ${esc(c.profile.email)}</a>`:''}${c.profile.linkedin?`<a href="${esc(c.profile.linkedin)}" target="_blank" rel="noreferrer">LinkedIn ↗</a>`:''}</div><div class="contact-footer"><span>LEE SO-YEON</span><span>PLAN THE EXPERIENCE. CONNECT THE PEOPLE. DELIVER THE RESULT.</span></div></section>
+  </main><div id="modalRoot"></div>
+ </div>`;
+ bind();
+}
+function openCase(item){document.body.style.overflow='hidden'; document.getElementById('modalRoot').innerHTML=`<div class="modal-backdrop" id="modalBackdrop"><div class="case-modal" onclick="event.stopPropagation()"><div class="modal-header"><span>CASE ${item.no} · ${esc(item.label)}</span><button id="closeModal" aria-label="닫기">${icon.x}</button></div><div class="modal-body"><div class="modal-kicker">PROJECT CASE STUDY</div><h2>${esc(item.title)}</h2><p class="modal-subtitle">${esc(item.subtitle)}</p><div class="modal-section"><h4>${icon.alert} PROBLEM</h4><p>${esc(item.problem)}</p></div><div class="modal-section"><h4>${icon.check} ROLE · 내가 한 일</h4><div class="role-grid">${item.role.map(x=>`<div>• ${esc(x)}</div>`).join('')}</div></div><div class="modal-section"><h4>APPROACH · 실행 흐름</h4><div class="approach-list">${item.approach.map((x,i)=>`<span><b>${String(i+1).padStart(2,'0')}</b>${esc(x)}</span>`).join('')}</div></div><div class="modal-section"><h4>RESULT · 확인된 결과</h4><div class="result-callout">${esc(item.result)}</div></div><div class="modal-section"><h4>LEARNING</h4><blockquote>“${esc(item.learning)}”</blockquote></div></div><div class="modal-footer"><button id="closeModal2">닫기</button></div></div></div>`; document.getElementById('modalBackdrop').onclick=closeModal; document.getElementById('closeModal').onclick=closeModal; document.getElementById('closeModal2').onclick=closeModal;}
+function closeModal(){document.body.style.overflow='';document.getElementById('modalRoot').innerHTML='';}
+function bind(){
+ document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>{document.getElementById(b.dataset.go)?.scrollIntoView({behavior:'smooth'});document.getElementById('mobileMenu').classList.remove('open');}));
+ const mb=document.getElementById('menuBtn'); mb.addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('open'));
+ document.querySelectorAll('.case-card').forEach(card=>{const item=CONTENT.cases.find(x=>x.no===card.dataset.case); card.addEventListener('click',()=>openCase(item));card.addEventListener('keydown',e=>{if(e.key==='Enter')openCase(item)});});
+ const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.site-nav nav button').forEach(b=>b.classList.toggle('active',b.dataset.go===e.target.id));}}),{rootMargin:'-20% 0px -65%'}); navItems.forEach(([,id])=>{const el=document.getElementById(id);if(el)obs.observe(el);});
+ window.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('modalRoot').innerHTML)closeModal();});
+}
+render();
+</script>
+</body>
+</html>
